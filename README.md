@@ -44,7 +44,7 @@ So if we have an n-dimensional data set, then the matrix has n rows and n column
 
 - Since $cov(a,b) = cov(b,a)$, the matrix is symmetrical about the main diagonal.
 
-### Calculate Covariance matrix in Numpy
+## Calculate Covariance matrix in Numpy
 
 In numpy, we can calculate the covariance of a given matrix using `np.cov()` function,  as shown below:
 
@@ -102,7 +102,7 @@ $Q$ is a matrix comprised of the eigenvectors, $diag(V)$ is a diagonal matrix co
 
 A decomposition operation breaks down a matrix into constituent parts to make certain operations on the matrix easier to perform. Eigendecomposition is used as an element to simplify the calculation of other more complex matrix operations.
 
-### Eigenvectors and Eigenvalues
+## Eigenvectors and Eigenvalues
 
 __Eigenvectors__ are unit vectors, with length or magnitude is equal to 1.0. They are often referred as right vectors, which simply means a column vector (as opposed to a row vector or a left vector). Imagine a transformation matrix that, when multiplied on the left, reflected vectors in the line $y=x$. We can see that if there were a vector that lay on the line $y=x$, it’s reflection it itself. This vector (and all multiples of it), would be an eigenvector of that transformation matrix.
 
@@ -167,7 +167,7 @@ print(C)
     [ -3.73863537  -8.46653421 -13.19443305]
 
 
-### Reconstruct Original Matrix
+## Reconstruct Original Matrix
 
 We can reverse the process and reconstruct the original matrix given only the eigenvectors and eigenvalues.
 

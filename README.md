@@ -37,7 +37,7 @@ where $C^{m x n}$ is a matrix with $n$ rows and $n$ columns, and $Dim_x$ is the 
 
 So if we have an n-dimensional data set, then the matrix has n rows and n columns (square matrix) and each entry in the matrix is the result of calculating the covariance between two separate dimensions as shown below:
 
-<img src="covmat.png" width=350>
+<img src="images/covmat.png" width=350>
 
 
 - Down the main diagonal, we can see that the covariance value is between one of the dimensions and itself. These are the variances for that dimension.
@@ -107,7 +107,7 @@ A decomposition operation breaks down a matrix into constituent parts to make ce
 __Eigenvectors__ are unit vectors, with length or magnitude is equal to 1.0. They are often referred as right vectors, which simply means a column vector (as opposed to a row vector or a left vector). Imagine a transformation matrix that, when multiplied on the left, reflected vectors in the line $y=x$. We can see that if there were a vector that lay on the line $y=x$, it’s reflection it itself. This vector (and all multiples of it), would be an eigenvector of that transformation matrix.
 
 
-![](eig1.png)
+![](images/eig1.png)
 
 __Eigenvalues__ are coefficients applied to eigenvectors that give the vectors their length or magnitude. For example, a negative eigenvalue may reverse the direction of the eigenvector as part of scaling it. Eigenvalues are closely related to eigenvectors.
 

@@ -93,7 +93,7 @@ Here, __lambda__ ($\lambda$) is the represents the __eigenvalue__ scalar.
 
 Also , remember that not all square matrices can be decomposed into eigenvectors and eigenvalues, and some can only be decomposed in a way that requires complex numbers. __The parent matrix can be shown to be a product of the eigenvectors and eigenvalues.__
 
-$$A = Q . diag(V) . Q^-1$$
+$$A = Q . diag(V) . Q^{-1}$$
 
 $Q$ is a matrix comprised of the eigenvectors, $diag(V)$ is a diagonal matrix comprised of the __eigenvalues__ along the diagonal, and $Q^-1$ is the inverse of the matrix comprised of the eigenvectors.
 
@@ -183,4 +183,4 @@ print(B)
 
 ## Summary 
 
-In this lesson, you looked at calculating covariance matrix for a given matrix. You also looked at eigen decomposition and its implementation in python. You can now go ahead and use these skills to apply principle component analysis for a given multidimensional dataset using these skills.  
+In this lesson, you looked at calculating covariance matrix for a given matrix. You also looked at eigendecomposition and its implementation in python. You can now go ahead and use these skills to apply principle component analysis for a given multidimensional dataset using these skills.  

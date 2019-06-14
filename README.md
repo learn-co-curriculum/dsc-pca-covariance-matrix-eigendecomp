@@ -7,7 +7,7 @@ Now that you've gotten a high level overview of the use cases for PCA and some g
 ## Objectives
 You will be able to:
 - Understand covariance matrix calculation with implementation in numpy
-- Understand and explain Eigendecomspoistion with its basic characteristics
+- Understand and explain Eigendecomposition with its basic characteristics
 - Explain the role of eigenvectors and eigenvalues in eigendecomposition
 - Decompose and re-construct a matrix using eigendecomposition
 

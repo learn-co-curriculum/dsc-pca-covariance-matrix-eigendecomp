@@ -104,7 +104,7 @@ A decomposition operation breaks down a matrix into constituent parts to make ce
 __Eigenvectors__ are unit vectors, with length or magnitude is equal to 1.0. They are often referred as right vectors, which simply means a column vector (as opposed to a row vector or a left vector). Imagine a transformation matrix that, when multiplied on the left, reflected vectors in the line $y=x$. You can see that if there were a vector that lay on the line $y=x$, it’s reflection it itself. This vector (and all multiples of it), would be an eigenvector of that transformation matrix.
 
 
-![](images/eig1.png)
+<img src='images/new_eig1.png' width='400'>
 
 __Eigenvalues__ are coefficients applied to eigenvectors that give the vectors their length or magnitude. For example, a negative eigenvalue may reverse the direction of the eigenvector as part of scaling it. Eigenvalues are closely related to eigenvectors.
 

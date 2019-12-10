@@ -45,7 +45,7 @@ The covariance matrix for a set of data with $n$ dimensions would be:
 
 $$C^{n x n} = (c_{i,j}, c_{i,j} = cov(Dim_i, Dim_j))$$
 
-where $C^{m x n}$ is a matrix with $n$ rows and $n$ columns, and $Dim_x$ is the $i$th dimension.
+where $C^{n x n}$ is a matrix with $n$ rows and $n$ columns, and $Dim_x$ is the $i$th dimension.
 
 So if you have an n-dimensional dataset, then the matrix has $n$ rows and $n$ columns (square matrix) and each entry in the matrix is the result of calculating the covariance between two separate dimensions as shown below:
 

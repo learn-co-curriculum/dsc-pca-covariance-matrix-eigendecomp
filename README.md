@@ -1,9 +1,8 @@
-
 # PCA Background: Covariance Matrix and Eigendecomposition
 
 ## Introduction 
 
-Now that you've gotten a high level overview of the use cases for PCA and some general notes regarding the algorithm's implementation, its time to dive deeper into the theory behind PCA. In particular, you'll break down some of the primary components of the algorithm, including the covariance matrix and eigenvectors.
+Now that you've gotten a high-level overview of the use cases for PCA and some general notes regarding the algorithm's implementation, its time to dive deeper into the theory behind PCA. In particular, you'll break down some of the primary concepts of the algorithm, including the covariance matrix and eigenvectors.
 
 
 ## Objectives 
@@ -19,12 +18,12 @@ You will be able to:
 
 ## The PCA Algorithm
 
-The general procedure for PCA:  
+Recall that the general procedure for PCA is:  
     
 1. Recenter each feature of the dataset by subtracting that feature's mean from the feature vector
 2. Calculate the covariance matrix for your centered dataset
 3. Calculate the eigenvectors of the covariance matrix
-4. Project the dataset into the new feature space: Multiply the eigenvectors by the mean centered features
+4. Project the dataset into the new feature space: Multiply the eigenvectors by the mean-centered features
 
 With that, let's start deconstructing some of these concepts.
 
@@ -32,7 +31,7 @@ With that, let's start deconstructing some of these concepts.
 
 You've looked into correlation and covariance as measures to calculate how one random variable changes with respect to another. 
 
-Covariance is very similar to correlation, but is not be normalized. The formula for the covariance of two variables $X$ and $Y$ is:
+Covariance is very similar to correlation, but is not normalized. The formula for the covariance of two variables $X$ and $Y$ is:
 
 $$cov(X,Y) = \frac{\sum_i^n(X_i -\mu_X)(Y_i - \mu_Y)}{n-1}$$
 
@@ -52,9 +51,9 @@ So if you have an n-dimensional dataset, then the matrix has $n$ rows and $n$ co
 <img src="images/covmat.png" width=350>
 
 
-- Down the main diagonal, we can see that the covariance value is between one of the dimensions and itself. These are the variances for that dimension 
+- Down the main diagonal, we can see that the covariance value is between one of the dimensions and itself. These are the variances for that dimension
 
-- Since $cov(a,b) = cov(b,a)$, the matrix is symmetrical around the main diagonal  
+- Since $cov(a,b) = cov(b,a)$, the matrix is symmetric about the main diagonal  
 
 
 
@@ -110,17 +109,19 @@ Here, __lambda__ ($\lambda$) represents the __eigenvalue__ scalar.
 
 > A matrix can have one eigenvector and eigenvalue for each dimension of the parent matrix. 
 
-Also, remember that not all square matrices can be decomposed into eigenvectors and eigenvalues, and some can only be decomposed in a way that requires complex numbers. __The parent matrix can be shown to be a product of the eigenvectors and eigenvalues.__
+Also, remember that not all square matrices can be decomposed into eigenvectors and eigenvalues, and some can only be decomposed in a way that requires complex numbers.
+
+__The parent matrix can be shown to be a product of the eigenvectors and eigenvalues.__
 
 $$A = Q . diag(V) . Q^{-1}$$
 
-$Q$ is a matrix comprised of the eigenvectors, $diag(V)$ is a diagonal matrix comprised of the __eigenvalues__ along the diagonal, and $Q^-1$ is the inverse of the matrix comprised of the eigenvectors.
+$Q$ is a matrix comprised of the eigenvectors, $diag(V)$ is a diagonal matrix comprised of the __eigenvalues__ along the diagonal (and zeros everywhere else), and $Q^{-1}$ is the inverse of the matrix comprised of the eigenvectors.
 
-A decomposition operation breaks down a matrix into constituent parts to make certain operations on the matrix easier to perform. Eigendecomposition is used as an element to simplify the calculation of other more complex matrix operations.
+A decomposition operation breaks down a matrix into constituent parts to make certain operations on the matrix easier to perform. Eigendecomposition is used as an element to simplify the calculation of other, more complex matrix operations.
 
 ## Eigenvectors and Eigenvalues
 
-__Eigenvectors__ are unit vectors, with length or magnitude equal to 1.0. They are often referred as right vectors, which simply means a column vector (as opposed to a row vector or a left vector). Imagine a transformation matrix that, when multiplied on the left, reflected vectors in the line $y=x$. You can see that if there were a vector that lay on the line $y=x$, it’s reflection is itself. This vector (and all multiples of it), would be an eigenvector of that transformation matrix.
+__Eigenvectors__ are unit vectors, with length or magnitude equal to 1.0. They are often referred to as right vectors, which simply means a column vector (as opposed to a row vector or a left vector). Imagine a transformation matrix that, when multiplied on the left, reflected vectors in the line $y=x$. You can see that if there were a vector that lay on the line $y=x$, it’s reflection is itself. This vector (and all multiples of it), would be an eigenvector of that transformation matrix.
 
 
 <img src='images/new_eig1.png' width='400'>
@@ -131,7 +132,7 @@ A matrix that has only positive eigenvalues is referred to as a __positive defin
 
 Decomposing a matrix in terms of its eigenvalues and its eigenvectors gives valuable insights into the properties of the matrix. Certain matrix calculations, like computing the power of the matrix, become much easier when we use the eigendecomposition of the matrix. The eigendecomposition can be calculated in NumPy using the `eig()` function.
 
-The example below first defines a 3×3 square matrix. The eigendecomposition is calculated on the matrix returning the eigenvalues and eigenvectors using `eig()` function.
+The example below first defines a 3×3 square matrix. The eigendecomposition is calculated on the matrix returning the eigenvalues and eigenvectors using the `eig()` function.
 
 
 ```python
@@ -211,4 +212,4 @@ print(B)
 
 ## Summary 
 
-In this lesson, you looked at calculating covariance matrix for a given matrix. You also looked at eigendecomposition and its implementation in Python. You can now go ahead and use these skills to apply principle component analysis for a multidimensional dataset using these skills.  
+In this lesson, you looked at calculating the covariance matrix for a given matrix. You also looked at eigendecomposition and its implementation in Python. You can now go ahead and use these skills to apply principal component analysis for a multidimensional dataset using these skills.  
